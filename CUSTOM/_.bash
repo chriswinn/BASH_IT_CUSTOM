@@ -5,7 +5,7 @@
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
 # Turn off Bash Session Recording
-SHELL_SESSION_HISTORY=0
+#SHELL_SESSION_HISTORY=0
 
 # ================ Ruby Config ====================
 
@@ -24,6 +24,31 @@ GOPATH=~/.go/bin:$GOPATH
 #   /usr/local/opt/python/libexec/bin
 export PATH="/Users/c17n/Library/Python/3.7/bin:$PATH"
 export PATH="/usr/local/opt/python/libexec/bin:$PATH"
+
+# VENV_Wrapper Config
+export WORKON_HOME=$HOME/.virtualenvs
+export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
+export PROJECT_HOME=$HOME/Devel
+source /usr/local/bin/virtualenvwrapper.sh
+# deactivate                       # Exit out of the current Python virtual environment
+# workon                           # List available virtual environments
+# workon name_of_environment       # Activate the specified Python virtual environment
+# rmvirtualenv name_of_environment # Remove the specified environment
+
+# ================ Django Notes ====================
+
+# Django Config
+#   To create a new virtual environment run:
+#   Example... run
+#     mkvirtualenv my_django_environment      # create virtualenv 
+#     workon my_django_environment            # start using that virtualenv
+#     pip3 install django                     # install django inside that virtualenv
+#     python3 -m django --version             # validate django is installed
+#     mkdir django_test                       # wherever you want the django project to live
+#     cd django_test                          # move into the directory
+#     django-admin startproject mytestsite    # create a new skeleton site called "mytestsite" using the django-admin tool
+#     cd mytestsite                           # move into the directory     
+#     python3 manage.py runserver             # run the development web server from within this folder using manage.py and the runserver
 
 # ================ AWS Config ====================
 
@@ -88,5 +113,6 @@ export EDITOR='vim'
 #Example configuration has been installed to:
 #  /usr/local/opt/tmux/share/tmux
 #   tmux -u new-session \; split-window -h \; split-window -v \; select-pane -t 0 \; send-keys ' ' C-m \;
+alias tmux-dev="tmux -u new-session \; split-window -h -p 70 \; send-keys 'top' C-m \; split-window -v -p 65 \; send-keys 'vim $PWD/.' C-m \; select-pane -t 1 \; send-keys 'vim $PWD/.' C-m \;"
 #Bash completion has been installed to:
 #  /usr/local/etc/bash_completion.d
