@@ -4,6 +4,8 @@
 # Bash Turn Colors On
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
+# Turn off Bash Session Recording
+SHELL_SESSION_HISTORY=0
 
 # ================ Ruby Config ====================
 
