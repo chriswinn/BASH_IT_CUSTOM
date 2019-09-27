@@ -47,11 +47,6 @@ export AWS_DEFAULT_REGION="$(aws configure get region --output=text)"
 alias show_calendar='cal'
 alias show_software_version='sw_vers'
 
-# ================ BASH Set Default Editor ====================
-
-# Just to set default editor while inside tmux
-export EDITOR='vim'
-
 # ================ BASH Homebrew completion Config ====================
 
 # Just to enable completion for packages installed by Homebrew
@@ -80,10 +75,16 @@ fi
 #For pkg-config to find ncurses you may need to set:
 #  export PKG_CONFIG_PATH="/usr/local/opt/ncurses/lib/pkgconfig"
 
+# ================ BASH Set Default Editor ====================
+
+# Just to set default editor while inside tmux
+export EDITOR='vim'
+
 # ================ Tmux Config ====================
 
 #==> tmux
 #Example configuration has been installed to:
 #  /usr/local/opt/tmux/share/tmux
+#   tmux -u new-session \; split-window -h \; split-window -v \; select-pane -t 0 \; send-keys ' ' C-m \;
 #Bash completion has been installed to:
 #  /usr/local/etc/bash_completion.d
