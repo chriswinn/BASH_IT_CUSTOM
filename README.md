@@ -1,2 +1,3 @@
-# BASH_IT_CUSTOM
-Creating a git repository to keep all of my terminal customizations under version control
+# `/third_party`
+
+External helper tools, forked code and other 3rd party utilities (e.g., Swagger UI).
