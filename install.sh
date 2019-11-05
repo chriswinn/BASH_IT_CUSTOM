@@ -3,11 +3,11 @@
 
 # Create a '~/.bash_profile' file via a symlink.
 #   ...so any future customizations can be tracked here
-ln -s ~/.dot/bash_profile ~/.bash_profile
+ln -s ~/.dot/CUSTOM/bash_profile ~/.bash_profile
 
 # Create a '~/.bashrc' file via a symlink.
 #   ...so any future customizations can be tracked here
-ln -s ~/.dot/bashrc ~/.bashrc
+ln -s ~/.dot/CUSTOM/bashrc ~/.bashrc
 
 # Create a '~/.tmux.conf' file via a symlink.
 #   ...so any future customizations can be tracked here
