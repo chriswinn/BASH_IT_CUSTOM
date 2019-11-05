@@ -24,12 +24,11 @@ GOPATH=~/.go/bin:$GOPATH
 #   /usr/local/opt/python/libexec/bin
 export PATH="/Users/c17n/Library/Python/3.7/bin:$PATH"
 export PATH="/usr/local/opt/python/libexec/bin:$PATH"
-
 # VENV_Wrapper Config
-export WORKON_HOME=$HOME/.virtualenvs
-export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
-export PROJECT_HOME=$HOME/Devel
-source /usr/local/bin/virtualenvwrapper.sh
+#export WORKON_HOME=$HOME/.virtualenvs
+#export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
+#export PROJECT_HOME=$HOME/Devel
+#source /usr/local/bin/virtualenvwrapper.sh
 # deactivate                       # Exit out of the current Python virtual environment
 # workon                           # List available virtual environments
 # workon name_of_environment       # Activate the specified Python virtual environment
@@ -61,18 +60,13 @@ complete -C '/Users/c17n/Library/Python/3.7/bin/aws_completer' aws
 # AWS Environment Variables
 #   export AWS_ACCOUNT_ID=""     ## e.g. 123456789012
 #   export AWS_DEFAULT_REGION="" ## e.g. us-east-1
-export AWS_ACCOUNT_ID="$(aws sts get-caller-identity --output=text --query='Account')"
-export AWS_DEFAULT_REGION="$(aws configure get region --output=text)"
+#export AWS_ACCOUNT_ID="$(aws sts get-caller-identity --output=text --query='Account')"
+#export AWS_DEFAULT_REGION="$(aws configure get region --output=text)"
 
 # ================ BASH Session folder ====================
 
 # NOT WORKING... <not sure why, no time to dig now>.
 #SHELL_SESSION_DIR="$BASH_IT/._/.bash_sessions" 
-
-# ================ BASH Aliases ====================
-
-alias show_calendar='cal'
-alias show_software_version='sw_vers'
 
 # ================ BASH Homebrew completion Config ====================
 
@@ -109,10 +103,16 @@ export EDITOR='vim'
 
 # ================ Tmux Config ====================
 
-#==> tmux
 #Example configuration has been installed to:
 #  /usr/local/opt/tmux/share/tmux
-#   tmux -u new-session \; split-window -h \; split-window -v \; select-pane -t 0 \; send-keys ' ' C-m \;
-alias tmux-dev="tmux -u new-session \; split-window -h -p 70 \; send-keys 'top' C-m \; split-window -v -p 65 \; send-keys 'vim $PWD/.' C-m \; select-pane -t 1 \; send-keys 'vim $PWD/.' C-m \;"
+alias tmux-sane="tmux -u new-session \; split-window -h -p 70 \; split-window -v -p 65 \; select-pane -t 0 \; send-keys 'vim $PWD/.' C-m \;"
+#alias tmux-dev="tmux -u new-session \; split-window -h -p 70 \; send-keys 'brew list && pip list' C-m \; split-window -v -p 65 \; send-keys 'vim $PWD/.' C-m \; select-pane -t 1 \; send-keys 'vim $PWD/.' C-m \;"
+alias tmux-dev="tmux -u new-session \; split-window -h -p 70 \; send-keys 'pip list' C-m \; split-window -v -p 65 \; send-keys 'brew list' C-m \; select-pane -t 1 \; send-keys 'vim $PWD/.' C-m \;"
 #Bash completion has been installed to:
 #  /usr/local/etc/bash_completion.d
+
+# ================ BASH Aliases ====================
+
+alias show_calendar='cal'
+alias show_software_version='sw_vers'
+alias docker-login="docker-machine ssh default"
