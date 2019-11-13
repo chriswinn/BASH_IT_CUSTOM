@@ -11,8 +11,7 @@
 
 ########################
 # Ignore: ./vim/plugged/   # directory
-third_party/**
-third_party
+third_party/
 
 ########################
 # DO NOT IGNORE!: .gitignore file inside these dirs. 
