@@ -11,11 +11,9 @@
 
 ########################
 # Ignore: ./vim/plugged/   # directory
-third_party/VIM/.vim/plugged/**
-third_party/VIM/.vim/backups/**
+third_party/**
 
 ########################
 # DO NOT IGNORE!: .gitignore file inside these dirs. 
 #   NOTE: Have to have a file inside each directory so I can add an empty directory to git 
-!third_party/VIM/.vim/plugged/.gitignore
-!third_party/VIM/.vim/backups/.gitignore
+#!third_party/VIM/.vim/backups/.gitignore
