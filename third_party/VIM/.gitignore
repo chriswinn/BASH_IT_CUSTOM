@@ -11,8 +11,8 @@
 
 ########################
 # Ignore: ./vim/plugged/   # directory
-plugged/**
-backups/**
+plugged
+backups
 
 ########################
 # DO NOT IGNORE!: .gitignore file inside these dirs. 

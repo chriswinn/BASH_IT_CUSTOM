@@ -105,8 +105,11 @@ call plug#begin('~/.vim/plugged')
 " Declare the list of plugins.
 Plug 'tpope/vim-sensible'
 Plug 'junegunn/seoul256.vim'
+"Plug 'henrik/vim-reveal-in-finder'
+"Plug 'kballenegger/vim-autoreadwatch'
 Plug 'scrooloose/nerdtree'
   Plug 'Xuyuanp/nerdtree-git-plugin'
+
 "   If you need Vim help for vim-plug itself (e.g. :help plug-options), register vim-plug as a plugin.
 "Plug 'junegunn/vim-plug'
 " List ends here. Plugins become visible to Vim after this call.
@@ -131,6 +134,7 @@ let NERDTreeQuitOnOpen = 1
 "   NERDTree : Deleting files
 "     Automatically delete the buffer of the file you just deleted with NerdTree:
 let NERDTreeAutoDeleteBuffer = 1
+map <C-t> :NERDTreeToggle<CR>
 
 " ================ Custom Settings ========================
 "source ~/.vim/scripts.vim
